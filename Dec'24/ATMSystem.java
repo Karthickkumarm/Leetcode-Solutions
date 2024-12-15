@@ -3,8 +3,8 @@ import java.util.*;
 
 public class ATMSystem {
 
-    static Map<Integer, Integer> atmCash = new LinkedHashMap<>(); // Denomination, Count
-    static Map<Integer, Customer> customers = new LinkedHashMap<>();
+    static Map<Integer, Integer> atmCash = new HashMap<>(); // Denomination, Count
+    static Map<Integer, Customer> customers = new HashMap<>();
 
     static class Customer {
         int accountNumber;
@@ -45,7 +45,7 @@ public class ATMSystem {
                     break;
                 case 4:
                     System.out.println("Exiting...");
-                    saveDataToFile();
+                    //saveDataToFile();
                     return;
                 default:
                     System.out.println("Invalid option. Try again.");
